@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLTPS</title>
+    <style>
+        /* Animasi RGB untuk teks judul */
+        @keyframes rgb-animation {
+            0% { color: #ff0000; }
+            33% { color: #00ff00; }
+            66% { color: #0000ff; }
+            100% { color: #ff0000; }
+        }
+        h1 {
+            animation: rgb-animation 2.5s linear infinite;
+            text-align: center;
+            font-size: 3.5em;
+            margin-top: 20px;
+        }
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+        .container {
+            background-color: #1e1e1e;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 8px 0;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+        .btn:hover {
+            background-color: #1976d2;
+        }
+        .server-status {
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        pre {
+            background-color: #2d2d2d;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Judul dengan Efek RGB -->
+    <h1>BOLTPS</h1>
+
+    <!-- Deskripsi Server -->
+    <div class="container">
+        <h2>Tentang Kabu GTPS</h2>
+        <p>BOLTPS merupakan bagian dari ekosistem Kabu GTPS, sebuah server private Growtopia yang dirancang untuk memberikan pengalaman bermain yang stabil, menyenangkan, dan ramah komunitas. Dengan konfigurasi jaringan optimal dan pembaruan berkala, Kabu GTPS bertujuan menjadi pilihan utama bagi pemain yang mencari server dengan kualitas terbaik.</p>
+    </div>
+
+    <!-- Status Server -->
+    <div class="container">
+        <h2>Status Server</h2>
+        <p class="server-status">🟢 SERVER ONLINE & AKTIF</p>
+    </div>
+
+    <!-- Link Unduhan Vhost -->
+    <div class="container">
+        <h2>Unduh Vhost</h2>
+        <a href="https://www.mediafire.com/file/n534zkhqh6fjwwe/BOLTPS.txt/file" target="_blank" class="btn">📥 Unduh Vhost BOLTPS</a>
+    </div>
+
+    <!-- Tombol Copy PTunnel & Windows Config -->
+    <div class="container">
+        <h2>Konfigurasi Tambahan</h2>
+        
+        <button class="btn" onclick="copyToClipboard('ptunnel-url')">📋 Copy PTunnel Link</button>
+        <p id="ptunnel-url">https://dash.gtps.cloud/android/2449</p>
+
+        <button class="btn" onclick="copyToClipboard('windows-config')">📋 Copy Windows Config</button>
+        <pre id="windows-config">91.134.85.13 growtopia1.com
+91.134.85.13 growtopia2.com
+91.134.85.13 www.growtopia1.com
+91.134.85.13 www.growtopia2.com</pre>
+    </div>
+
+    <script>
+        // Fungsi untuk menyalin teks ke clipboard
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text)
+                .then(() => alert("Teks berhasil disalin ke clipboard!"))
+                .catch(err => alert("Gagal menyalin: " + err));
+        }
+    </script>
+</body>
+</html>
